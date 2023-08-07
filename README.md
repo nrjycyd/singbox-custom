@@ -52,14 +52,17 @@ github.com/sagernet/sing-box/cmd/sing-box@latest
 - **'with_gvisor' Build with gVisor support, see Tun inbound and WireGuard outbound.**
 - **'with_embedded_tor' Build with embedded Tor support, see Tor outbound.**
 - **'with_lwip' Build with LWIP Tun stack support, see Tun inbound.**
-## Install sing-box using the precompiled version
+## Install sing-box using the precompiled version(supports some functions)
 ### The download URL for sing-box is [https://github.com/SagerNet/sing-box/releases](https://github.com/SagerNet/sing-box/releases).
-
-
-
-
-
-
+```
+wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.3.6/sing-box-1.3.6-linux-amd64.tar.gz" -O - | tar -xz -C /usr/local/bin --strip-components=1 && chmod +x /usr/local/bin/sing-box
+```
+- **'wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.3.6/sing-box-1.3.6-linux-amd64.tar.gz"': This part of the command uses the 'wget' utility to download the Sing-Box release version 1.3.6 for Linux (64-bit) from the specified URL. The '-c' option is used to continue the download if it's interrupted or if a partially downloaded file exists.**
+- **'-O -': This part of the command tells 'wget' to output the downloaded content to the standard output (stdout) instead of saving it to a file.**
+- **'|': The pipe symbol pipes the output of the first command ('wget') as input to the second command ('tar').**
+- **'tar -xz -C /usr/local/bin --strip-components=1': This part of the command uses the 'tar' utility to extract the contents of the downloaded tar.gz archive. The options '-x' and '-z' tell 'tar' to extract and decompress the gzip-compressed archive. The '-C /usr/local/bin' option specifies the target directory where the extracted files will be placed, in this case, '/usr/local/bin'. The '--strip-components=1' option tells 'tar' to remove the top-level directory when extracting, so the files are directly placed in '/usr/local/bin' without the unnecessary directory level.**
+- **'&&': The double ampersand is a shell operator used to execute the next command only if the previous command succeeds (exits with a status of 0).**
+- **'chmod +x /usr/local/bin/sing-box': This part of the command sets the executable (+x) permission on the 'sing-box' binary located in '/usr/local/bin', making it executable.**
 
 
 
