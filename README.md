@@ -18,7 +18,7 @@ wget -c https://go.dev/dl/go1.20.5.linux-amd64.tar.gz -O - | tar -xz -C /usr/loc
 - **'tar -xz -C /usr/local': This part of the command uses 'tar' to extract the downloaded archive file (Go language) from the standard input (piped from 'wget') and extract its contents into the '/usr/local' directory.**
 - **'PATH=$PATH:/usr/local/go/bin': Setting the PATH environment variable.**
 - **The command 'source /etc/profile' is used to load and apply the changes made to the global system environment variables and settings defined in the '/etc/profile' file.**
-
+- **The command 'go version' is used to check the installed version of the Go programming language on your system.**
 
 
 
