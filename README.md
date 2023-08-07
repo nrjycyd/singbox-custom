@@ -16,8 +16,8 @@ wget -c https://go.dev/dl/go1.20.5.linux-amd64.tar.gz -O - | tar -xz -C /usr/loc
 - **'-O -': This option tells 'wget' to output the downloaded file to the standard output (stdout) instead of saving it to a file on disk. The hyphen "-" means stdout.**
 - **'|': This is a pipe symbol, used to redirect the standard output of one command to the standard input of another command.**
 - **'tar -xz -C /usr/local': This part of the command uses 'tar' to extract the downloaded archive file (Go language) from the standard input (piped from 'wget') and extract its contents into the '/usr/local' directory.**
-
-
+- **'PATH=$PATH:/usr/local/go/bin': Setting the PATH environment variable.**
+- **The command 'source /etc/profile' is used to load and apply the changes made to the global system environment variables and settings defined in the '/etc/profile' file.**
 
 
 
