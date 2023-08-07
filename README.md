@@ -1,4 +1,4 @@
-### To check the system's kernel architecture, you can use the uname command with the -m option.
+# To check the system's kernel architecture, you can use the uname command with the -m option.
 ```
 uname -m
 ```
@@ -6,7 +6,7 @@ uname -m
 - **386(i686 or i386): Indicates a 32-bit kernel.**
 - **armv7l: Indicates a 32-bit ARM-based kernel.**
 - **arm64(aarch64): Indicates a 64-bit ARM-based kernel.**
-### The download URL for Go is [https://golang.org/dl/](https://go.dev/dl/).
+# The download URL for Go is [https://golang.org/dl/](https://go.dev/dl/).
 ```
 wget -c https://go.dev/dl/go1.20.5.linux-amd64.tar.gz -O - | tar -xz -C /usr/local && echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile && source /etc/profile && go version
 ```
@@ -19,7 +19,7 @@ wget -c https://go.dev/dl/go1.20.5.linux-amd64.tar.gz -O - | tar -xz -C /usr/loc
 - **'PATH=$PATH:/usr/local/go/bin': Setting the PATH environment variable.**
 - **The command 'source /etc/profile' is used to load and apply the changes made to the global system environment variables and settings defined in the '/etc/profile' file.**
 - **The command 'go version' is used to check the installed version of the Go programming language on your system.**
-### Install sing-box with option
+# Install sing-box with option
 ```
 go install -v -tags \
 with_quic,\              
@@ -52,3 +52,27 @@ github.com/sagernet/sing-box/cmd/sing-box@latest
 - **'with_gvisor' Build with gVisor support, see Tun inbound and WireGuard outbound.**
 - **'with_embedded_tor' Build with embedded Tor support, see Tor outbound.**
 - **'with_lwip' Build with LWIP Tun stack support, see Tun inbound.**
+# Install sing-box using the precompiled version
+### The download URL for sing-box is [https://github.com/SagerNet/sing-box/releases](https://github.com/SagerNet/sing-box/releases).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
