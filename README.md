@@ -63,9 +63,25 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.3.6/sing-box-
 - **'tar -xz -C /usr/local/bin --strip-components=1': This part of the command uses the 'tar' utility to extract the contents of the downloaded tar.gz archive. The options '-x' and '-z' tell 'tar' to extract and decompress the gzip-compressed archive. The '-C /usr/local/bin' option specifies the target directory where the extracted files will be placed, in this case, '/usr/local/bin'. The '--strip-components=1' option tells 'tar' to remove the top-level directory when extracting, so the files are directly placed in '/usr/local/bin' without the unnecessary directory level.**
 - **'&&': The double ampersand is a shell operator used to execute the next command only if the previous command succeeds (exits with a status of 0).**
 - **'chmod +x /usr/local/bin/sing-box': This part of the command sets the executable (+x) permission on the 'sing-box' binary located in '/usr/local/bin', making it executable.**
+## systemd service unit file for sing-box service
+```
+[Unit]
+Description=sing-box service
+Documentation=https://sing-box.sagernet.org
+After=network.target nss-lookup.target
 
+[Service]
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+ExecStart=/usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json
+Restart=on-failure
+RestartSec=1800s
+LimitNOFILE=infinity
 
-
+[Install]
+WantedBy=multi-user.target
+```
+- **'ExecStart': Specifies the command to start the service. It runs '/usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json'.'/usr/local/bin/sing-box' is the absolute path of the sing-box program, '/usr/local/etc/sing-box/config.json' is the absolute path of the sing-box configuration file, and 'config.json' is the configuration file.**
 
 
 
