@@ -38,6 +38,17 @@ with_embedded_tor,\
 with_lwip \            
 github.com/sagernet/sing-box/cmd/sing-box@latest
 ```
-
-
-
+- **'with_quic' Build with QUIC support, see QUIC and HTTP3 DNS transports, Naive inbound, Hysteria Inbound, Hysteria Outbound and V2Ray Transport#QUIC.**
+- **'with_grpc' Build with standard gRPC support, see V2Ray Transport#gRPC.**
+- **'with_dhcp' Build with DHCP support, see DHCP DNS transport.**
+- **'with_wireguard' Build with WireGuard support, see WireGuard outbound.**
+- **'with_shadowsocksr' Build with ShadowsocksR support, see ShadowsocksR outbound.**
+- **'with_ech' Build with TLS ECH extension support for TLS outbound, see TLS.**
+- **'with_utls' Build with uTLS support for TLS outbound, see TLS.**
+- **'with_reality_server' Build with reality TLS server support, see TLS.**
+- **'with_acme' Build with ACME TLS certificate issuer support, see TLS.**
+- **'with_clash_api' Build with Clash API support, see Experimental.**
+- **'with_v2ray_api' Build with V2Ray API support, see Experimental.**
+- **'with_gvisor' Build with gVisor support, see Tun inbound and WireGuard outbound.**
+- **'with_embedded_tor' Build with embedded Tor support, see Tor outbound.**
+- **'with_lwip' Build with LWIP Tun stack support, see Tun inbound.**
