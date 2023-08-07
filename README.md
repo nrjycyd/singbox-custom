@@ -1,4 +1,4 @@
-# To check the system's kernel architecture, you can use the uname command with the -m option.
+## To check the system's kernel architecture, you can use the uname command with the -m option.
 ```
 uname -m
 ```
