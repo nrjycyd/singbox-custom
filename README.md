@@ -8,7 +8,7 @@ uname -m
 - **arm64(aarch64): Indicates a 64-bit ARM-based kernel.**
 ## The download URL for Go is [https://golang.org/dl/](https://go.dev/dl/).
 ```
-wget -c https://go.dev/dl/go1.20.5.linux-amd64.tar.gz -O - | tar -xz -C /usr/local && echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile && source /etc/profile && go version
+wget -c https://go.dev/dl/go1.20.7.linux-amd64.tar.gz -O - | tar -xz -C /usr/local && echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile && source /etc/profile && go version
 ```
 - **'wget': This command is used to download files from the internet.**
 - **'-c': This option tells 'wget' to continue a previously interrupted download if the file already exists, allowing you to resume the download from where it left off.**
