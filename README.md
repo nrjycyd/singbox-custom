@@ -65,6 +65,7 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.3.6/sing-box-
 - **'chmod +x /usr/local/bin/sing-box': This part of the command sets the executable (+x) permission on the 'sing-box' binary located in '/usr/local/bin', making it executable.**
 ## systemd service unit file for sing-box service
 ```
+cat > /etc/systemd/system/sing-box.service <<EOF
 [Unit]
 Description=sing-box service
 Documentation=https://sing-box.sagernet.org
@@ -81,6 +82,7 @@ LimitNOFILE=infinity
 
 [Install]
 WantedBy=multi-user.target
+EOF
 ```
 - **'ExecStart': Specifies the command to start the service. It runs '/usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json'.'/usr/local/bin/sing-box' is the absolute path of the sing-box program, '/usr/local/etc/sing-box/config.json' is the absolute path of the sing-box configuration file, and 'config.json' is the configuration file.**
 
