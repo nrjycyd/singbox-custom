@@ -28,20 +28,20 @@ source /etc/profile
 ## Install sing-box with option
 ```
 go install -v -tags \
-with_quic,\              
-with_grpc,\             
-with_dhcp,\            
-with_wireguard,\         
-with_shadowsocksr,\     
-with_ech,\              
-with_utls,\             
-with_reality_server,\    
-with_acme,\              
-with_clash_api,\         
-with_v2ray_api,\        
-with_gvisor,\           
-with_embedded_tor,\     
-with_lwip \            
+with_quic,\
+with_grpc,\
+with_dhcp,\
+with_wireguard,\
+with_shadowsocksr,\
+with_ech,\
+with_utls,\
+with_reality_server,\
+with_acme,\
+with_clash_api,\
+with_v2ray_api,\
+with_gvisor,\
+with_embedded_tor,\
+with_lwip \
 github.com/sagernet/sing-box/cmd/sing-box@latest
 ```
 - **'with_quic' Build with QUIC support, see QUIC and HTTP3 DNS transports, Naive inbound, Hysteria Inbound, Hysteria Outbound and V2Ray Transport#QUIC.**
