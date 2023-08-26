@@ -13,6 +13,7 @@ wget -c https://go.dev/dl/go1.20.7.linux-amd64.tar.gz -O - | tar -xz -C /usr/loc
 ```
 echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile
 ```
+```
 source /etc/profile
 ```
 - **'wget': This command is used to download files from the internet.**
