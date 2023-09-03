@@ -15,7 +15,7 @@ wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/Install_si
 ```
 - ## **Download and modify the sing-box configuration file**
 ```
-mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/TinrLin/ShadowTLS-v3-build-tutorial/main/config.json
+mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/congfig.json
 ```
 - ## **Start and run sing-box**
 ```
