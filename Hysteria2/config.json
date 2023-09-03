@@ -12,10 +12,6 @@
       "listen_port": 443,    //监听端口
       "up_mbps": 500,        //上行速率
       "down_mbps": 500,      //下行速率
-      "obfs": {
-        "type": "salamander",
-        "password": "cry_me_a_r1ver"     //QUIC 流量混淆器密码，可通过 openssl rand -base64 12 随机生成
-      },
       "users": [
         {
           "password": "goofy_ahh_password"    //用户认证密码，可通过 openssl rand -base64 12 随机生成
