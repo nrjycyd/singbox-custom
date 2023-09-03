@@ -11,7 +11,7 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/si
 ```
 - ## **Configure the systemd service of sing-box**
 ```
-wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/ShadowTLS-v3-build-tutorial/main/sing-box.service
+wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/sing-box.service
 ```
 - ## **Download and modify the sing-box configuration file**
 ```
