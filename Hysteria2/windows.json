@@ -19,10 +19,6 @@
       "server_port": 443,     //监听端口
       "up_mbps": 500,        //上行速率
       "down_mbps": 500,      //下行速率
-      "obfs": {
-        "type": "salamander",
-        "password": "3zTy1bs+xxVzmHwN"   //QUIC 流量混淆器密码
-      },
       "password": "flThtmX7Vj/C7rJ8",    //用户认证密码
       "tls": {
         "enabled": true,
