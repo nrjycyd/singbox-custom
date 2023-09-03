@@ -1,5 +1,8 @@
 # **installation**
-
+### **Update the software sources and install the specified packages.**
+```
+apt update && apt -y install wget tar socat
+```
 ### **Download the precompiled version of sing-box**
 - **AMD core**
 ```
