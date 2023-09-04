@@ -1,9 +1,9 @@
-# **安装sing-box**
-### **更新软件源及安装依赖**
+### **安装sing-box**
+#### **更新软件源及安装依赖**
 ```
 apt update && apt -y install wget tar socat
 ```
-### **下载预发布版sing-box**
+#### **下载预发布版sing-box**
 - **AMD 内核**
 ```
 wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/sing-box-1.5.0-beta.2-linux-amd64.tar.gz" -O - | tar -xz -C /usr/local/bin --strip-components=1 && chmod +x /usr/local/bin/sing-box
@@ -20,7 +20,7 @@ wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/Install_si
 ```
 mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/congfig.json
 ```
-### 配置证书
+### **配置证书**
 - **安装acme**
 ```
 curl -s https://get.acme.sh | sh -s email=example@gmail.com
@@ -45,7 +45,7 @@ acme.sh --install-cert -d www.example.com --ecc --key-file /etc/ssl/private/priv
 ```
 systemctl daemon-reload && systemctl enable --now sing-box && systemctl status sing-box
 ```
-# **Hysteria端口跳跃**
+### **Hysteria端口跳跃**
 ```
 # Debian&&Ubuntu
 
