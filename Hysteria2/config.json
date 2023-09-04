@@ -18,6 +18,7 @@
         }
       ],
       "ignore_client_bandwidth": false,     //若为 true 客户端使用 BBR 拥塞控制算法，若为 false 客户端使用 Hysteria CC，若为 true 则取消 up_mbps 和 down_mbps 配置
+      "masquerade": "https://www.bing.com",   //反代网站
       "tls": {
         "enabled": true,
         "alpn": ["h3"],
