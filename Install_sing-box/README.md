@@ -47,7 +47,7 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.4.0-beta.6/si
 - **'|'：一个管道符号，用于将一个命令的标准输出重定向到另一命令的标准输入。**
 - **'tar -xz -C /usr/local/bin --strip-components=1'：这部分命令使用 'tar' 来提取下载的 tar.gz 文件。选项 '-x' 和 '-z' 告诉' tar' 提取并解压缩 gzip 文档。'-C /usr/local/bin' 选项指定解压缩文件的目标目录，'--strip-components=1' 选项告诉 'tar' 在解压时删除上一级目录，这样文件直接放在 '/usr/local/bin' 中，而没有不必要的目录。**
 
-## 配置sing-box开机自启
+## 配置sing-box开机自启服务
 ```
 cat > /etc/systemd/system/sing-box.service <<EOF
 [Unit]
