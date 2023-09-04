@@ -1,30 +1,20 @@
 {
-  "log": {
-    "level": "info",
-    "timestamp": true
+  "server": "domain.com:10010,20000-40000",   //域名：监听端口，端口跳跃范围
+  "auth": "31abu73z5dtu",     //用户认证密码
+  "bandwidth": {
+    "up": "200 mbps",    //上行速率
+    "down": "500 mbps"   //下行速率
   },
-  "inbounds": [
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::",
-      "listen_port": 1080
-    }
-  ],
-  "outbounds": [
-    {
-      "type": "hysteria2",
-      "tag": "hy2-out",
-      "server": "domain.com",  //域名
-      "server_port": 443,     //监听端口
-      "up_mbps": 500,        //上行速率
-      "down_mbps": 500,      //下行速率
-      "password": "flThtmX7Vj/C7rJ8",    //用户认证密码
-      "tls": {
-        "enabled": true,
-        "server_name": "domain.com",     //域名
-        "alpn": ["h3"]		
-      }
-    }
-  ]
+  "transport": {
+    "type": "udp",
+    "hopInterval": "30s"   //端口跳跃间隔时间
+  },
+  "fastOpen": true,
+  "lazy": true,
+  "socks5": {
+    "listen": "127.0.0.1:1080"
+  },
+  "http": {
+    "listen": "127.0.0.1:8080"
+  }
 }
