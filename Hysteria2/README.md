@@ -16,7 +16,7 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/si
 ```
 wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/sing-box.service
 ```
-### **下载并修改单盒配置文件**
+### **下载并修改 sing-box 配置文件**
 ```
 mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/congfig.json
 ```
