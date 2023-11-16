@@ -102,5 +102,9 @@ systemctl daemon-reload && systemctl enable --now sing-box && systemctl status s
 systemctl start sing-box    #启动
 systemctl restart sing-box    #重启
 systemctl status sing-box    #查看状态
+...
+sing-box generate uuid    #生成UUID
+sing-box generate reality-keypair    #生成private_key
+...
 ```
 
