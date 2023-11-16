@@ -65,11 +65,11 @@ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 ## 开放HTTP端口
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 
-## 开放UDP端口（10010替换为节点的监听端口）
-iptables -A INPUT -p udp --dport 10010 -j ACCEPT
+## 开放UDP端口（10860替换为节点的监听端口）
+iptables -A INPUT -p udp --dport 10860 -j ACCEPT
 
-## 开放UDP端口范围（假设UDP端口范围为20000-40000）
-iptables -A INPUT -p udp --dport 20000:40000 -j ACCEPT
+## 开放UDP端口范围（假设UDP端口范围为30000-50000）
+iptables -A INPUT -p udp --dport 30000:50000 -j ACCEPT
 
 ## 允许接受本机请求之后的返回数据
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
@@ -83,8 +83,8 @@ iptables -P OUTPUT ACCEPT
 ## 查看开放的端口
 iptables -L
 
-## 添加NAT规则，20000:40000替换为你设置端口跳跃的范围，10010替换为你节点的监听端口
-iptables -t nat -A PREROUTING -p udp --dport 20000:40000 -j DNAT --to-destination :10010
+## 添加NAT规则，30000:50000替换为你设置端口跳跃的范围，10860替换为你节点的监听端口
+iptables -t nat -A PREROUTING -p udp --dport 30000:50000 -j DNAT --to-destination :10860
 
 ## 查看NAT规则
 iptables -t nat -nL --line
