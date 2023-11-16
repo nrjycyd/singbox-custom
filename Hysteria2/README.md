@@ -89,6 +89,7 @@ iptables -t nat -nL --line
 netfilter-persistent save
 ```
 ## **启动并运行sing-box**
+- **验证config.json格式：** https://jsonlint.com/
 - **检查sing-box配置**
 ```
 /usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json
