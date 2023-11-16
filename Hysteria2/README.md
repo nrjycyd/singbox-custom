@@ -38,13 +38,13 @@ curl -s https://get.acme.sh | sh
 ```
 - **self-signed证书安装**
 ```
-## 安装acme
+##  创建安装目录
 mkdir -p /etc/ssl/self-signed
 
-## 设置 acme 的默认 CA
+## 生成私钥，安装到指定目录
 openssl ecparam -genkey -name prime256v1 -out /etc/ssl/self-signed/private.key
 
-## 生成证书（将www.example.com替换为你的域名）
+## 生成证书，安装到指定目录
 openssl req -new -x509 -days 3650 -key /etc/ssl/self-signed/private.key -out /etc/ssl/self-signed/cert.crt -subj "/CN=bing.com"
 ```
 ## **Hysteria端口跳跃**
