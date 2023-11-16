@@ -1,5 +1,5 @@
 {
-  "server": "domain.com:10010,20000-40000",   //域名：监听端口，端口跳跃范围
+  "server": "www.example.com:10010,20000-40000",   //域名：监听端口，端口跳跃范围
   "auth": "31abu73z5dtu",     //用户认证密码
   "bandwidth": {
     "up": "200 mbps",    //上行速率
