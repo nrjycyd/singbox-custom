@@ -18,6 +18,7 @@ wget -c https://go.dev/dl/go1.20.7.linux-amd64.tar.gz -O - | tar -xz -C /usr/loc
 - **'source /etc/profile' 加载并应用环境变量。**
 - **'go version' 显示系统上安装的 go 版本。**
 ## 编译安装 sing-box
+- **编译linux平台的二进制文件**
 ```
 go install -v -tags \
 with_quic,\
@@ -35,6 +36,10 @@ with_gvisor,\
 with_embedded_tor,\
 with_lwip \
 github.com/sagernet/sing-box/cmd/sing-box@latest
+```
+- **复制编译好的文件到指定路径**
+```
+cp $(go env GOPATH)/bin/sing-box /usr/local/bin/
 ```
 - **每个选项的具体意思请到 sing-box官方文档查看，官方文档地址：[https://sing-box.sagernet.org/zh/installation/from-source/](https://sing-box.sagernet.org/zh/installation/from-source/)**
 ## 下载预编译版 sing-box
