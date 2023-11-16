@@ -16,11 +16,11 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/si
 ```
 ## **配置 sing-box 的 systemd 服务**
 ```
-wget -P /etc/systemd/system https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/sing-box.service
+wget -P /etc/systemd/system https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@main/Hysteria2/sing-box.service
 ```
 ## **下载并修改 sing-box 配置文件**
 ```
-mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/TinrLin/Install_sing-box/main/Hysteria2/congfig.json
+mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@main/Hysteria2/config.json
 ```
 ## **配置证书**
 - **安装acme**
