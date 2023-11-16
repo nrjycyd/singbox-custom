@@ -36,7 +36,7 @@ curl -s https://get.acme.sh | sh
 ```
 - **安装证书（将www.example.com替换为你的域名）**
 ```
-~/.acme.sh/acme.sh --install-cert -d www.example.com --ecc --key-file /etc/ssl/private/private.key --fullchain-file /etc/ssl/private/cert.crt
+~/.acme.sh/acme.sh --install-cert -d www.example.com --ecc --key-file /etc/ssl/CA/private.key --fullchain-file /etc/ssl/CA/cert.crt
 ```
 ## **Hysteria端口跳跃**
 ```
