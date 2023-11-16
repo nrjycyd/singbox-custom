@@ -22,21 +22,30 @@ wget -P /etc/systemd/system https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@m
 mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@main/Hysteria2/config.json
 ```
 ## **配置证书**
-- **安装acme**
+- **CA证书安装**
 ```
+## 安装acme
 curl -s https://get.acme.sh | sh
-```
-- **设置 acme 的默认 CA**
-```
+
+## 设置 acme 的默认 CA
 ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-```
-- **生成证书（将www.example.com替换为你的域名）**
-```
+
+## 生成证书（将www.example.com替换为你的域名）
 ~/.acme.sh/acme.sh  --issue -d www.example.com --standalone -k ec-256 --force --insecure
-```
-- **安装证书（将www.example.com替换为你的域名）**
-```
+
+## 安装证书（将www.example.com替换为你的域名）
 ~/.acme.sh/acme.sh --install-cert -d www.example.com --ecc --key-file /etc/ssl/CA/private.key --fullchain-file /etc/ssl/CA/cert.crt
+```
+- **self-signed证书安装**
+```
+## 安装acme
+mkdir -p /etc/ssl/self-signed
+
+## 设置 acme 的默认 CA
+openssl ecparam -genkey -name prime256v1 -out /etc/ssl/self-signed/private.key
+
+## 生成证书（将www.example.com替换为你的域名）
+openssl req -new -x509 -days 3650 -key /etc/ssl/self-signed/private.key -out /etc/ssl/self-signed/cert.crt -subj "/CN=bing.com"
 ```
 ## **Hysteria端口跳跃**
 ```
