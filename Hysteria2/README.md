@@ -22,6 +22,10 @@ wget -P /etc/systemd/system https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@m
 ```
 mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@main/Hysteria2/config.json
 ```
+## **检查 sing-box 配置文件**
+```
+/usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json
+```
 ## **配置证书**
 - **安装acme**
 ```
