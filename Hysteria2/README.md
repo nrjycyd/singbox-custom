@@ -5,7 +5,6 @@ apt update && apt -y install wget tar socat curl
 ```
 #### **下载预发布版sing-box**
 - **预编译版下载地址：** https://github.com/SagerNet/sing-box/releases.
-
 - **AMD 内核**
 ```
 wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/sing-box-1.5.0-beta.2-linux-amd64.tar.gz" -O - | tar -xz -C /usr/local/bin --strip-components=1 && chmod +x /usr/local/bin/sing-box
