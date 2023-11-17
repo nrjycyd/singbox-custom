@@ -24,6 +24,9 @@ mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://cdn.jsd
 ## **配置证书**
 - **CA证书安装**
 ```
+##  创建安装目录
+mkdir -p /etc/ssl/CA
+
 ## 安装acme
 curl -s https://get.acme.sh | sh
 
