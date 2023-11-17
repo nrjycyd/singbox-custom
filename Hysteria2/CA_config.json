@@ -26,12 +26,10 @@
       "masquerade": "https://www.bing.com",    //伪装网址
       "tls": {
         "enabled": true,
-        "server_name": "www.example.com",    //自有域名，CA证书需要，self-signed证书删除
+        "server_name": "www.example.com",    //自有域名，CA证书需要
         "alpn": ["h3"],
-        "certificate_path": "/etc/ssl/CA/cert.crt",    //CA证书文件，与self-signed二选一
-        "key_path": "/etc/ssl/CA/private.key"    //CA私钥文件，与self-signed二选一
-        "certificate_path": "/etc/ssl/self-signed/cert.crt",    //self-signed证书文件，与CA二选一
-	"key_path": "/etc/ssl/self-signed/private.key"    //self-signed私钥文件，与CA二选一
+        "certificate_path": "/etc/ssl/CA/cert.crt",    //CA证书文件
+        "key_path": "/etc/ssl/CA/private.key"    //CA私钥文件
       }
     }
   ],
