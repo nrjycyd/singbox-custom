@@ -15,42 +15,52 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/si
 ```
 ## **配置 sing-box 的 systemd 服务**
 ```
-wget -P /etc/systemd/system https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@main/Hysteria2/sing-box.service
+wget -P /etc/systemd/system https://raw.githubusercontent.com/nrjycyd/singbox-custom/main/Hysteria2/sing-box.service
 ```
-## **下载并修改 sing-box 配置文件**
+## **配置 sing-box 的config文件**
+- **下载并修改config文件**
+
 ```
-mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://cdn.jsdelivr.net/gh/nrjycyd/singbox-custom@main/Hysteria2/config.json
+mkdir /usr/local/etc/sing-box && wget -P /usr/local/etc/sing-box https://raw.githubusercontent.com/nrjycyd/singbox-custom/main/Hysteria2/CA_config.json
+```
+
+- **重命名config文件**
+
+```
+mv /usr/local/etc/sing-box/CA_config.json /usr/local/etc/sing-box/config.json
 ```
 ## **配置证书**
-- **CA证书安装**
+
+- **创建安装目录**
 ```
-##  创建安装目录
 mkdir -p /etc/ssl/CA
+```
+- **安装acme**
 
-## 安装acme
+```
 curl -s https://get.acme.sh | sh
+```
 
-## 设置 acme 的默认 CA
+- **设置 acme 的默认 CA**
+
+```
 ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+```
 
-## 生成证书（将www.example.com替换为你的域名）
+- **生成证书（将www.example.com替换为你的域名）**
+
+```
 ~/.acme.sh/acme.sh  --issue -d www.example.com --standalone -k ec-256 --force --insecure
+```
 
-## 安装证书（将www.example.com替换为你的域名）
+- **安装证书（将www.example.com替换为你的域名）**
+
+```
 ~/.acme.sh/acme.sh --install-cert -d www.example.com --ecc --key-file /etc/ssl/CA/private.key --fullchain-file /etc/ssl/CA/cert.crt
 ```
-- **self-signed证书安装**
-```
-##  创建安装目录
-mkdir -p /etc/ssl/self-signed
 
-## 生成私钥，安装到指定目录
-openssl ecparam -genkey -name prime256v1 -out /etc/ssl/self-signed/private.key
-
-## 生成证书，安装到指定目录
-openssl req -new -x509 -days 3650 -key /etc/ssl/self-signed/private.key -out /etc/ssl/self-signed/cert.crt -subj "/CN=bing.com"
-```
 ## **Hysteria端口跳跃**
+
 ```
 # Debian&&Ubuntu
 
@@ -112,6 +122,7 @@ systemctl daemon-reload && systemctl enable --now sing-box && systemctl status s
 - **sing-box其他指令**
 ```
 systemctl start sing-box    #启动
+systemctl stop sing-box    #停止
 systemctl restart sing-box    #重启
 systemctl status sing-box    #查看状态
 ...
