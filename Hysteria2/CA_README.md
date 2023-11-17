@@ -9,10 +9,6 @@ apt update && apt -y install wget tar socat curl
 ```
 wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/sing-box-1.5.0-beta.2-linux-amd64.tar.gz" -O - | tar -xz -C /usr/local/bin --strip-components=1 && chmod +x /usr/local/bin/sing-box
 ```
-- **ARM 内核**
-```
-wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/sing-box-1.5.0-beta.2-linux-arm64.tar.gz" -O - | tar -xz -C /usr/local/bin --strip-components=1 && chmod +x /usr/local/bin/sing-box
-```
 ## **配置 sing-box 的 systemd 服务**
 ```
 wget -P /etc/systemd/system https://raw.githubusercontent.com/nrjycyd/singbox-custom/main/Hysteria2/sing-box.service
