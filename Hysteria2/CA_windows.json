@@ -11,7 +11,7 @@
   },
   "tls": {
     "sni": "www.example.com",    //CA域名
-    "insecure": false    //CA证书：false；
+    "insecure": false
   },
   "fastOpen": true,
   "lazy": true,
