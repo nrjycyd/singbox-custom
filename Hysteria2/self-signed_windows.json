@@ -10,8 +10,8 @@
     "hopInterval": "30s"   //端口跳跃间隔时间
   },
   "tls": {
-    "sni": "www.example.com",    //CA证书：www.example.com；self-signed证书：www.bing.com
-    "insecure": false    //CA证书：false；self-signed证书：true
+    "sni": "www.bing.com",
+    "insecure": true
   },
   "fastOpen": true,
   "lazy": true,
