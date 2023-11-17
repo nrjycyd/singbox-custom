@@ -1,0 +1,24 @@
+{
+  "server": "ip:10860,30000-50000",   //域名：监听端口，端口跳跃范围
+  "auth": "31abu73z5dtu",     //用户认证密码；
+  "bandwidth": {
+    "up": "50 mbps",    //上行速率
+    "down": "150 mbps"   //下行速率
+  },
+  "transport": {
+    "type": "udp",
+    "hopInterval": "30s"   //端口跳跃间隔时间
+  },
+  "tls": {
+    "sni": "www.example.com",    //CA证书：www.example.com；self-signed证书：www.bing.com
+    "insecure": false    //CA证书：false；self-signed证书：true
+  },
+  "fastOpen": true,
+  "lazy": true,
+  "socks5": {
+    "listen": "127.0.0.1:1080"
+  },
+  "http": {
+    "listen": "127.0.0.1:8080"
+  }
+}
