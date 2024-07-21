@@ -1,8 +1,23 @@
+
+
 ## **安装sing-box**
 #### **更新软件源及安装依赖**
 ```
 apt update && apt -y install wget tar socat curl
 ```
+
+#### **官方脚本安装**
+- **地址：**[包管理器 - sing-box (sagernet.org)](https://sing-box.sagernet.org/zh/installation/package-manager/)
+```
+bash <(curl -fsSL https://sing-box.app/deb-install.sh)
+```
+
+> [!NOTE] Title
+> **官方脚本安装文件路径**
+> 内核文件：`/usr/bin/sing-box`
+> systemd 服务文件：`/usr/lib/systemd/system/sing-box.service`
+> config 配置文件：`/etc/sing-box/config.json`
+
 #### **下载预发布版sing-box**
 - **预编译版下载地址：** https://github.com/SagerNet/sing-box/releases.
 - **AMD 内核**
@@ -13,6 +28,8 @@ wget -c "https://github.com/SagerNet/sing-box/releases/download/v1.5.0-beta.2/si
 ```
 wget -P /etc/systemd/system https://raw.githubusercontent.com/nrjycyd/singbox-custom/main/Hysteria2/sing-box.service
 ```
+
+
 ## **配置 sing-box 的config文件**
 - **下载并修改config文件**
 
@@ -99,6 +116,12 @@ netfilter-persistent save
 ```
 /usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json
 ```
+
+> [!NOTE] Title
+> **官方脚本配置 检查sing-box**
+> `/usr/bin/sing-box run -c /etc/sing-box/config.json`
+
+
 - **启动并运行sing-box**
 ```
 systemctl daemon-reload && systemctl enable --now sing-box && systemctl status sing-box
