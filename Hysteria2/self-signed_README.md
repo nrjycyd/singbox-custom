@@ -120,7 +120,6 @@ netfilter-persistent save
 > **官方脚本配置 检查sing-box**  
 > `/usr/bin/sing-box run -c /etc/sing-box/config.json`
 
-
 - **启动并运行sing-box**
 ```
 systemctl daemon-reload && systemctl enable --now sing-box && systemctl status sing-box
