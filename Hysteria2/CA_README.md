@@ -3,6 +3,13 @@
 ```
 apt update && apt -y install wget tar socat curl
 ```
+
+> [!IMPORTANT]
+> **官方脚本安装文件路径**  
+> 内核文件：`/usr/bin/sing-box`  
+> systemd 服务文件：`/usr/lib/systemd/system/sing-box.service`  
+> config 配置文件：`/etc/sing-box/config.json`
+
 #### **下载预发布版sing-box**
 - **预编译版下载地址：** https://github.com/SagerNet/sing-box/releases.
 - **AMD 内核**
