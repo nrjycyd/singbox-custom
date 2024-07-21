@@ -12,7 +12,7 @@ apt update && apt -y install wget tar socat curl
 bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > **官方脚本安装文件路径**
 > 内核文件：`/usr/bin/sing-box`
 > systemd 服务文件：`/usr/lib/systemd/system/sing-box.service`
@@ -117,7 +117,7 @@ netfilter-persistent save
 /usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > **官方脚本配置 检查sing-box**
 > `/usr/bin/sing-box run -c /etc/sing-box/config.json`
 
