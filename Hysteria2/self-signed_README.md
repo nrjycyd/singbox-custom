@@ -12,7 +12,7 @@ apt update && apt -y install wget tar socat curl
 bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 ```
 
-> [!NOTE] Title
+> [!NOTE]
 > **官方脚本安装文件路径**
 > 内核文件：`/usr/bin/sing-box`
 > systemd 服务文件：`/usr/lib/systemd/system/sing-box.service`
