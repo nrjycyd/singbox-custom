@@ -13,7 +13,7 @@ bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 ```
 > [!IMPORTANT]
 > **官方脚本安装文件路径**
-> 查看安装文件路径代码：`dpkg -L sing-box`
+> 查看安装文件路径代码：`dpkg -L sing-box`  
 > ---
 > 内核文件：`/usr/bin/sing-box`  
 > systemd 服务文件：`/usr/lib/systemd/system/sing-box.service`  
