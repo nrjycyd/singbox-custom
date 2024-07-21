@@ -117,7 +117,7 @@ netfilter-persistent save
 /usr/local/bin/sing-box run -c /usr/local/etc/sing-box/config.json
 ```
 
-> [!NOTE] Title
+> [!NOTE]
 > **官方脚本配置 检查sing-box**
 > `/usr/bin/sing-box run -c /etc/sing-box/config.json`
 
