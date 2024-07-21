@@ -6,19 +6,18 @@
 apt update && apt -y install wget tar socat curl
 ```
 
-#### **官方脚本安装**
+#### **方法一：官方脚本安装 sing-box**
 - **地址：**[包管理器 - sing-box (sagernet.org)](https://sing-box.sagernet.org/zh/installation/package-manager/)
 ```
 bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 ```
-
 > [!IMPORTANT]
 > **官方脚本安装文件路径**  
 > 内核文件：`/usr/bin/sing-box`  
 > systemd 服务文件：`/usr/lib/systemd/system/sing-box.service`  
 > config 配置文件：`/etc/sing-box/config.json`
 
-#### **下载预发布版sing-box**
+#### **方法二：自定义安装 sing-box**
 - **预编译版下载地址：** https://github.com/SagerNet/sing-box/releases.
 - **AMD 内核**
 ```
