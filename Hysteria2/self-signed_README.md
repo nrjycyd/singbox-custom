@@ -63,10 +63,10 @@ openssl req -new -x509 -days 3650 -key /etc/ssl/self-signed/private.key -out /et
 
 > [!IMPORTANT]
 > **生成 RSA 私钥**  
-> `openssl genpkey -algorithm RSA -out /etc/ssl/self-signed/private.key -pkeyopt rsa_keygen_bits:2048`
+> `openssl genpkey -algorithm RSA -out /etc/ssl/self-signed/private.key -pkeyopt rsa_keygen_bits:2048`  
 > **使用 RSA 私钥生成自签名证书，并安装到指定目录**  
-> `openssl req -new -x509 -days 3650 -key /etc/ssl/self-signed/private.key -out /etc/ssl/self-signed/cert.crt -subj "/CN=bing.com"`
-> 调整权限
+> `openssl req -new -x509 -days 3650 -key /etc/ssl/self-signed/private.key -out /etc/ssl/self-signed/cert.crt -subj "/CN=bing.com"`  
+> 调整权限  
 
 ## **Hysteria端口跳跃**
 
