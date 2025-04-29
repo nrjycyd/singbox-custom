@@ -137,6 +137,7 @@ systemctl start sing-box    #启动
 systemctl stop sing-box    #停止
 systemctl restart sing-box    #重启
 systemctl status sing-box    #查看状态
+sing-box version             #查看版本
 ...
 sing-box generate uuid    #生成UUID
 sing-box generate reality-keypair    #生成private_key
